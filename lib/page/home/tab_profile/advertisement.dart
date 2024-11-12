@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_test_app/page/widgets/common_image.dart';
 
 class Advertisement extends StatelessWidget {
   const Advertisement({Key? key}) : super(key: key);
