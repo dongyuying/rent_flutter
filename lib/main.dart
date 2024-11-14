@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:my_test_app/page/404_page.dart';
+import 'package:my_test_app/page/binding/all_controller_binding.dart';
 
 import 'package:my_test_app/routes/route.dart';
 
@@ -26,6 +27,7 @@ const MyApp({ Key? key }) : super(key: key);
       initialRoute: '/',
       defaultTransition: Transition.rightToLeft,
       getPages: Routes.Route,
+      initialBinding: AllControllerBinding(),
     );
   }
 }

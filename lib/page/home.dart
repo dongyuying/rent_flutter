@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_test_app/page/binding/controller/config_controller_binding.dart';
 import 'package:my_test_app/page/home/tab_index.dart';
 import 'package:my_test_app/page/home/tab_info/index.dart';
 import 'package:my_test_app/page/home/tab_profile/index.dart';
@@ -21,11 +22,18 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
+  ConfigControllerBinding _configControllerBinding = Get.find<ConfigControllerBinding>();
 
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    _configControllerBinding.getImageUrl();
+    super.initState();
   }
 
   @override
